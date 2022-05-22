@@ -1,0 +1,4 @@
+- name: install nodejs
+  become_user: root
+  pacman:
+    name: nodejs

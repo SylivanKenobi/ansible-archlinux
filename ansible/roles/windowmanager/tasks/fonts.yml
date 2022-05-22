@@ -2,15 +2,8 @@
 
 - name: install fonts
   pacman:
-    name: "{{ item }}"
+    name: ["ttf-dejavu", "ttf-liberation", "ttf-droid", "noto-fonts-emoji", "fontconfig", "xorg-font-util", "ttf-font-awesome"]
     state: present
-  with_items:
-    - ttf-dejavu
-    - ttf-liberation
-    - ttf-droid
-    - noto-fonts-emoji
-    - fontconfig
-    - xorg-font-utils
   register: task_result
   until: task_result is success
   retries: 10

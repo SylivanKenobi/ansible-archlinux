@@ -1,0 +1,14 @@
+- name: download rvm script
+  uri:
+    url: https://get.rvm.io
+    dest: /tmp/rvm-install
+    user: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: "770"
+
+- name: install rvm
+  command: "/tmp/rvm-install"
+  become_user: "{{ user.name }}"
+
+- name: install ruby 2.7
+  command: "/home/{{ user.name }}/.rvm/bin/rvm install 2.7"

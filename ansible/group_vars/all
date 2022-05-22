@@ -3,7 +3,7 @@
 # ==================
 ##
 user:
-    name: aaron
+    name: sylvain
     group: users
     shell: /bin/zsh
 
@@ -22,15 +22,15 @@ system:
     locale: de_CH.UTF-8
     timezone: Europe/Zurich
     processor: amd
-    graphics_card: nvidia
-    macspoof: disabled
+    graphics_card: amd
+    macspoof: enabled
 
 ##
 # Bootloader configuration
 # ========================
 # syslinux and grub are supported
 ##
-bootloader: syslinux
+bootloader: grub
 
 ##
 # Connectivity configuration
@@ -48,7 +48,7 @@ ssh:
 ##
 dotfiles:
     installation: "true"
-    url: https://github.com/id101010/dotfiles.git
+    url: https://github.com/SylivanKenobi/dotfiles.git
     destination: .dotfiles
     rcup_flags: -fx README.md
 
