@@ -2,16 +2,27 @@
 
 - name: install i3 windowmanager and components
   pacman:
-    name: ["xorg", "xorg-xinit", "i3-gaps", "i3lock", "i3status-rust"]
+    name: 
+      - xorg
+      - xorg-xinit
+      - i3-gaps
+      - i3lock
+      - i3status-rust
+      - i3exit
     state: present
   register: task_result
   until: task_result is success
   retries: 10
   delay: 2
 
-- name: install i3 components
+- name: install components
   pacman:
-    name: ["dmenu", "feh", "dunst", "rofi", "compton"]
+    name: 
+    - dmenu
+    - feh
+    - dunst
+    - rofi
+    - compton
     state: present
   register: task_result
   until: task_result is success
@@ -30,15 +41,20 @@
     - i3lock-fancy-dualmonitors-git
     - glitchlock
 
-# # Compton does not work with xsetroot
-# - name: install hsetroot from aur
-#   aur:
-#     name: hsetroot
-#     user: "{{ user.name }}"
-
 - name: create i3wm configuration directory and util subdirectory
   file:
     name: /home/{{ user.name }}/.i3/util
     state: directory
     owner: "{{ user.name }}"
     group: "{{ user.group }}"
+
+- name: copy X11 config
+  copy:
+    src: "{{ item }}"
+    dest: /etc/X11/xorg.conf.d/
+    owner: root
+    group: root
+  with_items:
+    - 00-keyboard.conf
+    - 50-mouse-acceleration.conf
+    - 50-mouse-deceleration.conf
