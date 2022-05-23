@@ -22,3 +22,9 @@
 
 - name: Enable dhcp service
   service: name=dhcpcd state=started enabled=yes
+
+- name: Enable NetworkManager service
+  service: 
+    name: NetworkManager
+    state: started
+    enabled: yes

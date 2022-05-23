@@ -75,3 +75,5 @@ base_packages:
     - lsof
     - sysstat
     - tig
+    - flameshot
+    

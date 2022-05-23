@@ -1,17 +1,16 @@
 ---
-
-- name: Install telegram-desktop
+- name: Install signal-desktop
   pacman:
-    name: telegram-desktop
+    name: signal-desktop
     state: present
   register: task_result
   until: task_result is success
   retries: 10
   delay: 2
 
-- name: Jail telegram-desktop
+- name: Jail signal-desktop
   file: src=/usr/bin/firejail
-        dest=/usr/local/bin/telegram-desktop
+        dest=/usr/bin/signal-desktop
         state=link
   tags:
     - firejail
