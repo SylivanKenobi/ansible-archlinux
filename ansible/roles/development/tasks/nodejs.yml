@@ -1,4 +1,4 @@
 - name: install nodejs
-  become_user: True
+  become: True
   pacman:
     name: nodejs
