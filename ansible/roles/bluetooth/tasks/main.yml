@@ -12,6 +12,6 @@
 
 - name: Enable Bluetooth service
   service: 
-    name: NetworkManager
+    name: bluetooth
     state: started
     enabled: yes
