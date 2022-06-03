@@ -15,7 +15,7 @@
 - name: Add remote user to "docker" group
   user:
     name: "{{ user.name }}"
-    group: docker
+    groups: docker
     append: yes
 
 - name: enable docker service
