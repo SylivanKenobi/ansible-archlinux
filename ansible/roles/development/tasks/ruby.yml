@@ -2,13 +2,14 @@
   uri:
     url: https://get.rvm.io
     dest: /tmp/rvm-install
-    user: "{{ user.name }}"
+    owner: "{{ user.name }}"
     group: "{{ user.name }}"
     mode: "770"
 
 - name: install rvm
-  command: "/tmp/rvm-install"
   become_user: "{{ user.name }}"
+  command: "/tmp/rvm-install"
 
 - name: install ruby 2.7
+  become_user: "{{ user.name }}"
   command: "/home/{{ user.name }}/.rvm/bin/rvm install 2.7"
