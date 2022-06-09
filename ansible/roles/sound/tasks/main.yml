@@ -2,7 +2,11 @@
 
 - name: Install alsa-utils and pulseaudio tools
   pacman:
-    name: ["alsa-utils","pulseaudio","pulseaudio-alsa","pavucontrol"]
+    name: 
+      - alsa-utils
+      - pulseaudio
+      - pulseaudio-alsa
+      - pavucontrol
     state: present
   register: task_result
   until: task_result is success

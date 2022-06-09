@@ -1,0 +1,85 @@
+TASK [base : Install microcode updates for intel (if necessary)] ***************
+skipping: [localhost]
+
+TASK [base : Make sure ntpd is stopped] ****************************************
+skipping: [localhost]
+
+TASK [base : Sync time with swiss ntp metas atomic clock] **********************
+skipping: [localhost]
+
+TASK [base : Start ntpd back up] ***********************************************
+skipping: [localhost]
+
+TASK [base : Sync time to hwclock] *********************************************
+skipping: [localhost]
+
+TASK [base : ensure group users exists] ****************************************
+skipping: [localhost]
+
+TASK [base : ensure the user sylvain exists] ***********************************
+skipping: [localhost]
+
+TASK [base : Pacman mirrorlist setup] ******************************************
+skipping: [localhost]
+
+TASK [base : Pacman config setup] **********************************************
+skipping: [localhost]
+
+TASK [base : Update pacman package cache] **************************************
+skipping: [localhost]
+
+TASK [base : Perform full system upgrade] **************************************
+skipping: [localhost]
+
+TASK [base : Install base packages] ********************************************
+skipping: [localhost]
+
+TASK [base : Install yay as aur helper] ****************************************
+skipping: [localhost]
+
+TASK [base : Install microcode updates for intel (if necessary)] ***************
+skipping: [localhost]
+
+TASK [base : Install microcode updates for amd (if necessary)] *****************
+skipping: [localhost]
+
+TASK [base : Enable cronie server] *********************************************
+skipping: [localhost]
+
+TASK [base : Install ntp daemon] ***********************************************
+skipping: [localhost]
+
+TASK [base : Configure swiss metas atomic clocks] ******************************
+skipping: [localhost]
+
+TASK [base : Make sure ntpd is stopped] ****************************************
+skipping: [localhost]
+
+TASK [base : Sync time with swiss ntp metas atomic clock] **********************
+skipping: [localhost]
+
+TASK [base : Start ntpd back up] ***********************************************
+skipping: [localhost]
+
+TASK [base : Sync time to hwclock] *********************************************
+skipping: [localhost]
+
+TASK [base : Set timezone to Europe/Zurich] ************************************
+skipping: [localhost]
+
+TASK [base : Ensure the locale de_CH.UTF-8 exists] *****************************
+skipping: [localhost]
+
+TASK [syslinux : Install syslinux and tools] ***********************************
+skipping: [localhost]
+
+TASK [syslinux : Copy splash image into place] *********************************
+skipping: [localhost]
+
+TASK [syslinux : Generate and push syslinux configuration] *********************
+skipping: [localhost]
+
+TASK [macspoof : Enable macspoof for all interfaces] ***************************
+changed: [localhost] => (item=docker0)
+skipping: [localhost] => (item=lo) 
+ok: [localhost] => (item=enp0s3)
