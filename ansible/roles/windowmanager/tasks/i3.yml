@@ -39,6 +39,7 @@
   with_items:
     - i3lock-fancy-dualmonitors-git
     - glitchlock
+    - rofi-power-menu
 
 - name: create i3wm configuration directory and util subdirectory
   file:
