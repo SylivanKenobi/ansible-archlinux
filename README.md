@@ -18,7 +18,6 @@ will only get installed if the `dotfiles` variable is defined.
 * `tmux` with vim bindings
 
 ## Additional security features
-* Sensitive and internet facing applications are sandboxed using firejail
 * Restrictive and comprahensive iptables rules
 * Use of linux-hardened
 * Automatic mac address spoofer for wireless network devices

@@ -10,16 +10,3 @@
   retries: 10
   delay: 2
 
-- name: Jail signal-desktop
-  file: src=/usr/bin/firejail
-        dest=/usr/bin/signal-desktop
-        state=link
-  tags:
-    - firejail
-
-- name: Jail discord
-  file: src=/usr/bin/firejail
-        dest=/usr/bin/discord
-        state=link
-  tags:
-    - firejail

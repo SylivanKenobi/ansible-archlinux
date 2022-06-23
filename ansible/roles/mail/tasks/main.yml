@@ -10,9 +10,3 @@
   retries: 10
   delay: 2
 
-- name: Jail thunderbird
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/thunderbird
-        state=link
-  tags:
-    - firejail

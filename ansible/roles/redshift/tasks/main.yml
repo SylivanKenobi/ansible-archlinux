@@ -1,7 +1,9 @@
 ---
 
 - name: Install RedShift and dependencies
-  pacman: name={{ item }} state=present
+  pacman: 
+    name: "{{ item }}"
+    state: present
   with_items:
     - librsvg
     - python-gobject
@@ -12,19 +14,6 @@
   retries: 10
   delay: 2
 
-- name: Jail RedShift
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/redshift
-        state=link
-  tags:
-    - firejail
-
-- name: Jail RedShift GTK
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/redshift-gtk
-        state=link
-  tags:
-    - firejail
 
 - name: Apply redshift firejail profile
   copy:
