@@ -14,16 +14,6 @@
   retries: 10
   delay: 2
 
-
-- name: Apply redshift firejail profile
-  copy:
-    src: redshift.profile
-    dest: /usr/local/etc/firejail/redshift.profile
-  notify:
-    - activate profile
-  tags:
-    - firejail
-
 - name: Allow RedShift to access geoclue
   blockinfile:
     dest: /etc/geoclue/geoclue.conf
