@@ -11,7 +11,11 @@
 
 - name: Install ZSH with completion and syntax
   pacman: 
-    name: ['zsh', 'zsh-completions', 'zsh-syntax-highlighting', 'zsh-theme-powerlevel10k']
+    name: 
+     - zsh
+     - zsh-completions
+     - zsh-syntax-highlighting
+     - zsh-theme-powerlevel10k
     state: present
   register: zshinstall
   until: zshinstall is success
