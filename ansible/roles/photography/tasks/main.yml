@@ -5,7 +5,6 @@
     name:
       - gimp
       - darktable
-      - rawtherapee
       - shotwell
     state: present
   register: task_result
