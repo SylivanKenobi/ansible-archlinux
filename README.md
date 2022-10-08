@@ -8,7 +8,6 @@ will only get installed if the `dotfiles` variable is defined.
 ## System overview
 * Full disk encryption
 * LVM on LUKS partitioning scheme
-* Plymouth support for a nice boot screen
 
 ## Special configuration
 * Customized i3 window manager with
