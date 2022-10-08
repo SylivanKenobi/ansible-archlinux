@@ -4,4 +4,4 @@
   aur: 
     name: spotify
     user: "{{ user.name }}"
-
+    skip_pgp: true
