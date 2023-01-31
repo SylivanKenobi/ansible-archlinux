@@ -28,7 +28,7 @@
     - ms-toolsai.jupyter-renderers
     - rebornix.ruby
     - redhat.java
-    - redhat.vscode-yaml
     - streetsidesoftware.code-spell-checker
     - waderyan.gitblame
     - wingrunr21.vscode-ruby
+    - ms-kubernetes-tools.vscode-kubernetes-tools
