@@ -5,9 +5,9 @@
     name:
       - xorg
       - xorg-xinit
-      - i3-gaps
+      - i3-wm
       - i3lock
-      - i3status-rust
+      - polybar
     state: present
   register: task_result
   until: task_result is success
