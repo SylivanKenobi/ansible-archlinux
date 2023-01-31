@@ -9,7 +9,7 @@
   copy: src=macspoof@.service dest=/etc/systemd/system/
 
 - name: Enable macspoof for all interfaces
-  service: name=macspoof@{{ item }}.service enabled=yes
+  service: name=macspoof@{{ item }}.service enabled=true
   with_items:
     - "{{ ansible_interfaces }}"
   when: item != 'lo'

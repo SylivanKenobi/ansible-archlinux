@@ -12,7 +12,7 @@
 
 - name: Update pacman package cache
   pacman:
-    update_cache: yes
+    update_cache: true
   register: task_result
   until: task_result is success
   retries: 10
@@ -20,8 +20,8 @@
 
 - name: Perform full system upgrade
   pacman:
-    update_cache: yes
-    upgrade: yes
+    update_cache: true
+    upgrade: true
   register: task_result
   until: task_result is success
   retries: 10
@@ -41,7 +41,7 @@
     - rkhunter propupdate
 
 - name: Install yay as aur helper
-  aur: 
+  aur:
     name: yay
     user: "{{ user.name }}"
     skip_pgp: true
@@ -77,4 +77,4 @@
   when: system.processor == "amd"
 
 - name: Enable cronie server
-  service: name=cronie state=started enabled=yes
+  service: name=cronie state=started enabled=true

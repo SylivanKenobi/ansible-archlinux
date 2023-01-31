@@ -16,10 +16,10 @@
   user:
     name: "{{ user.name }}"
     groups: docker
-    append: yes
+    append: true
 
 - name: enable docker service
   service:
     name: docker
     state: started
-    enabled: yes
+    enabled: true

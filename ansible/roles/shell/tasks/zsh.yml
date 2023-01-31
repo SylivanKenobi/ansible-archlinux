@@ -10,8 +10,8 @@
   delay: 2
 
 - name: Install ZSH with completion and syntax
-  pacman: 
-    name: 
+  pacman:
+    name:
      - zsh
      - zsh-completions
      - zsh-syntax-highlighting
@@ -41,9 +41,9 @@
   when: omzinstall is changed
 
 - name: Install zsh-autosuggestions
-  git: 
+  git:
     repo: https://github.com/zsh-users/zsh-autosuggestions
     dest: "/usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions"
-    accept_hostkey: yes 
-    update: yes
-    force: yes
+    accept_hostkey: true
+    update: true
+    force: true

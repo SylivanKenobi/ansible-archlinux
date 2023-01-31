@@ -2,7 +2,7 @@
 
 - name: install i3 windowmanager and components
   pacman:
-    name: 
+    name:
       - xorg
       - xorg-xinit
       - i3-gaps
@@ -16,7 +16,7 @@
 
 - name: install components
   pacman:
-    name: 
+    name:
     - dmenu
     - feh
     - dunst

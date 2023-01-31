@@ -16,8 +16,8 @@
         - network
         - lock
         - uucp
-    append: yes
-    system: no
-    createhome: yes
+    append: true
+    system: false
+    createhome: true
     home: /home/{{ user.name }}
   when: user.name is defined

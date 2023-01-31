@@ -26,7 +26,7 @@ LABEL {{ item.label }}
     APPEND {{ kernel_line }}
     INITRD ../intel-ucode.img,../{{ item.initrd }}
 {% endfor %}
-{% elif system.processor == 'amd' %} 
+{% elif system.processor == 'amd' %}
 {% for item in bootoptions.values() %}
 LABEL {{ item.label }}
     MENU LABEL {{ item.menu_label }}

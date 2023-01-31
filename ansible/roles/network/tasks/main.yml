@@ -21,10 +21,10 @@
       - rkhunter propupdate
 
 - name: Enable dhcp service
-  service: name=dhcpcd state=started enabled=yes
+  service: name=dhcpcd state=started enabled=true
 
 - name: Enable NetworkManager service
-  service: 
+  service:
     name: NetworkManager
     state: started
-    enabled: yes
+    enabled: true

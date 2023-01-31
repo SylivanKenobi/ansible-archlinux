@@ -1,0 +1,21 @@
+# Ansible-Lint configuration
+# Options: https://github.com/ansible/ansible-lint#configuration-file
+
+use_default_rules: true
+offline: true
+
+warn_list:
+  - experimental
+
+skip_list:
+  - meta-no-info # we do not use meta anyhow
+  - fqcn[action-core]
+  - name[casing] # why would anyone wanna hava that
+  - name[template] # we're fine with jinja in between the Name
+  - template-instead-of-copy # we are lazy bastards and won't create a template file for oneliners
+
+# var_naming_pattern: "^[a-z0-9]*_[a-z0-9_]*$"
+
+# enable_list:
+#   - no-log-password
+#   - no-same-owner

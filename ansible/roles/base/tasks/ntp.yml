@@ -19,7 +19,7 @@
   service:
     name: ntpd
     state: stopped
-    enabled: yes
+    enabled: true
   when: install is changed
 
 - name: Sync time with swiss ntp metas atomic clock
@@ -30,7 +30,7 @@
   service:
     name: ntpd
     state: started
-    enabled: yes
+    enabled: true
   when: install is changed
 
 - name: Sync time to hwclock
